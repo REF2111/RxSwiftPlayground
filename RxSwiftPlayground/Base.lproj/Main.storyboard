@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,52 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxSwiftPlayground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkv-0v-Gqr">
+                                <rect key="frame" x="50" y="69" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axE-F3-clp">
+                                <rect key="frame" x="50" y="124" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5S-aF-Ev8">
+                                <rect key="frame" x="50" y="179" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y5S-aF-Ev8" firstAttribute="top" secondItem="axE-F3-clp" secondAttribute="bottom" constant="25" id="0xE-U4-e1q"/>
+                            <constraint firstItem="nkv-0v-Gqr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GXy-yU-AYT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y5S-aF-Ev8" secondAttribute="trailing" constant="50" id="HaH-HP-9hZ"/>
+                            <constraint firstItem="axE-F3-clp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L41-Ei-UQK"/>
+                            <constraint firstItem="axE-F3-clp" firstAttribute="top" secondItem="nkv-0v-Gqr" secondAttribute="bottom" constant="25" id="LlA-4W-5DA"/>
+                            <constraint firstItem="nkv-0v-Gqr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="MEa-YP-U7J"/>
+                            <constraint firstItem="axE-F3-clp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RAS-Rj-vYh"/>
+                            <constraint firstItem="y5S-aF-Ev8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Vfm-cu-E3b"/>
+                            <constraint firstItem="y5S-aF-Ev8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gMm-tu-X1E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="axE-F3-clp" secondAttribute="trailing" constant="50" id="hmJ-tt-HtU"/>
+                            <constraint firstItem="nkv-0v-Gqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="k83-kD-SyU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nkv-0v-Gqr" secondAttribute="trailing" constant="50" id="s9G-q0-uQz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="nkv-0v-Gqr" id="57X-nM-OMj"/>
+                        <outlet property="greetingsLabel" destination="y5S-aF-Ev8" id="dK4-Gx-5iw"/>
+                        <outlet property="lastNameTextField" destination="axE-F3-clp" id="hKw-BU-tv2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
