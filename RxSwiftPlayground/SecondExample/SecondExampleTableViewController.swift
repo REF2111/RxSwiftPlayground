@@ -20,7 +20,7 @@ struct Dog {
 class SecondExampleTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var buttonWidthConstraint: NSLayoutConstraint!
     private let disposeBag = DisposeBag() // FIXME: What does he do?
     
     private let dogs: [Dog] = [
@@ -42,7 +42,7 @@ class SecondExampleTableViewController: UIViewController {
     }
     
     deinit {
-        print("Dispose bag was emptied.")
+        // Dispose bag was emptied
     }
     
     private func doRxSwiftMagic() {
@@ -63,6 +63,11 @@ class SecondExampleTableViewController: UIViewController {
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self?.present(alertController, animated: true)
             })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.contentOffset
+            .map { $0.y + 100 }
+            .bind(to: buttonWidthConstraint.rx.constant)
             .disposed(by: disposeBag)
     }
     

@@ -16,16 +16,15 @@ class FirstExampleViewController: UIViewController {
     @IBOutlet private weak var firstNameTextField: UITextField!
     @IBOutlet private weak var lastNameTextField: UITextField!
     @IBOutlet private weak var greetingsLabel: UITextField!
-    
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        doObservableStuff()
+        doRxSwiftMagic()
     }
     
-    private func doObservableStuff() {
+    private func doRxSwiftMagic() {
         
         Observable.combineLatest(firstNameTextField.rx.text.orEmpty, lastNameTextField.rx.text.orEmpty) { $0 + " " + $1 }
             .map { "Moin, \($0)" }
