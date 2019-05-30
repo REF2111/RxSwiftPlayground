@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		601CCEA722A013A400FB58C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEA622A013A400FB58C7 /* AppDelegate.swift */; };
-		601CCEA922A013A400FB58C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEA822A013A400FB58C7 /* ViewController.swift */; };
+		601CCEA922A013A400FB58C7 /* FirstExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEA822A013A400FB58C7 /* FirstExampleViewController.swift */; };
 		601CCEAC22A013A400FB58C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601CCEAA22A013A400FB58C7 /* Main.storyboard */; };
 		601CCEAE22A013A800FB58C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601CCEAD22A013A800FB58C7 /* Assets.xcassets */; };
 		601CCEB122A013A800FB58C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601CCEAF22A013A800FB58C7 /* LaunchScreen.storyboard */; };
 		601CCEBF22A0148100FB58C7 /* RxSwiftPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEBE22A0148100FB58C7 /* RxSwiftPlaygroundTests.swift */; };
+		6097AC6022A02B8600DA03EB /* SecondExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6097AC5F22A02B8600DA03EB /* SecondExampleTableViewController.swift */; };
+		6097AC6522A02D0000DA03EB /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6097AC6322A02D0000DA03EB /* DogTableViewCell.swift */; };
+		6097AC6622A02D0000DA03EB /* DogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6097AC6422A02D0000DA03EB /* DogTableViewCell.xib */; };
 		6F751CDBF9AB44A2AAF5B375 /* Pods_RxSwiftPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A25EA7DC4EE02253FAC6661 /* Pods_RxSwiftPlayground.framework */; };
 		D5F9D2F4B616CDBDC352D7BA /* Pods_RxSwiftPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD9CE7D3B2899839ED1D450 /* Pods_RxSwiftPlaygroundTests.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +35,7 @@
 		1A25EA7DC4EE02253FAC6661 /* Pods_RxSwiftPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		601CCEA322A013A300FB58C7 /* RxSwiftPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		601CCEA622A013A400FB58C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		601CCEA822A013A400FB58C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		601CCEA822A013A400FB58C7 /* FirstExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExampleViewController.swift; sourceTree = "<group>"; };
 		601CCEAB22A013A400FB58C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		601CCEAD22A013A800FB58C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		601CCEB022A013A800FB58C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		601CCEBC22A0148000FB58C7 /* RxSwiftPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		601CCEBE22A0148100FB58C7 /* RxSwiftPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftPlaygroundTests.swift; sourceTree = "<group>"; };
 		601CCEC022A0148100FB58C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6097AC5F22A02B8600DA03EB /* SecondExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondExampleTableViewController.swift; sourceTree = "<group>"; };
+		6097AC6322A02D0000DA03EB /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
+		6097AC6422A02D0000DA03EB /* DogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogTableViewCell.xib; sourceTree = "<group>"; };
 		7CD9CE7D3B2899839ED1D450 /* Pods_RxSwiftPlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7C2874D503A80CD7EECDA0 /* Pods-RxSwiftPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPlayground.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPlayground/Pods-RxSwiftPlayground.release.xcconfig"; sourceTree = "<group>"; };
 		EB0B87C5635C1A7016D1021E /* Pods-RxSwiftPlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPlaygroundTests/Pods-RxSwiftPlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,8 +104,9 @@
 		601CCEA522A013A300FB58C7 /* RxSwiftPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				6097AC6122A02C7600DA03EB /* FirstExample */,
+				6097AC6222A02C8000DA03EB /* SecondExample */,
 				601CCEA622A013A400FB58C7 /* AppDelegate.swift */,
-				601CCEA822A013A400FB58C7 /* ViewController.swift */,
 				601CCEAA22A013A400FB58C7 /* Main.storyboard */,
 				601CCEAD22A013A800FB58C7 /* Assets.xcassets */,
 				601CCEAF22A013A800FB58C7 /* LaunchScreen.storyboard */,
@@ -115,6 +122,24 @@
 				601CCEC022A0148100FB58C7 /* Info.plist */,
 			);
 			path = RxSwiftPlaygroundTests;
+			sourceTree = "<group>";
+		};
+		6097AC6122A02C7600DA03EB /* FirstExample */ = {
+			isa = PBXGroup;
+			children = (
+				601CCEA822A013A400FB58C7 /* FirstExampleViewController.swift */,
+			);
+			path = FirstExample;
+			sourceTree = "<group>";
+		};
+		6097AC6222A02C8000DA03EB /* SecondExample */ = {
+			isa = PBXGroup;
+			children = (
+				6097AC5F22A02B8600DA03EB /* SecondExampleTableViewController.swift */,
+				6097AC6322A02D0000DA03EB /* DogTableViewCell.swift */,
+				6097AC6422A02D0000DA03EB /* DogTableViewCell.xib */,
+			);
+			path = SecondExample;
 			sourceTree = "<group>";
 		};
 		84CF16D2930BA96AD17296D6 /* Pods */ = {
@@ -215,6 +240,7 @@
 			files = (
 				601CCEB122A013A800FB58C7 /* LaunchScreen.storyboard in Resources */,
 				601CCEAE22A013A800FB58C7 /* Assets.xcassets in Resources */,
+				6097AC6622A02D0000DA03EB /* DogTableViewCell.xib in Resources */,
 				601CCEAC22A013A400FB58C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				601CCEA922A013A400FB58C7 /* ViewController.swift in Sources */,
+				601CCEA922A013A400FB58C7 /* FirstExampleViewController.swift in Sources */,
+				6097AC6022A02B8600DA03EB /* SecondExampleTableViewController.swift in Sources */,
+				6097AC6522A02D0000DA03EB /* DogTableViewCell.swift in Sources */,
 				601CCEA722A013A400FB58C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

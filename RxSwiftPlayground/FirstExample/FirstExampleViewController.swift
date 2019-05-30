@@ -11,7 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ViewController: UIViewController {
+class FirstExampleViewController: UIViewController {
     
     @IBOutlet private weak var firstNameTextField: UITextField!
     @IBOutlet private weak var lastNameTextField: UITextField!
