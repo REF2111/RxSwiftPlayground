@@ -135,25 +135,35 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-2z-zdK">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <rect key="frame" x="107" y="113" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="8T4-1a-VdN"/>
-                                    <constraint firstAttribute="width" constant="300" id="cGa-vQ-ekc"/>
+                                    <constraint firstAttribute="height" constant="200" id="8T4-1a-VdN"/>
+                                    <constraint firstAttribute="width" constant="200" id="cGa-vQ-ekc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V8C-hd-oFe">
+                                <rect key="frame" x="107" y="338" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Vsk-hd-MvY"/>
+                                    <constraint firstAttribute="width" constant="200" id="mVh-gh-g97"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mpz-2z-zdK" firstAttribute="centerX" secondItem="FZ0-Xt-tVg" secondAttribute="centerX" id="9uf-0v-s7h"/>
-                            <constraint firstItem="mpz-2z-zdK" firstAttribute="centerY" secondItem="FZ0-Xt-tVg" secondAttribute="centerY" id="VHj-TK-uyA"/>
+                            <constraint firstItem="mpz-2z-zdK" firstAttribute="top" secondItem="mIp-nm-0Ty" secondAttribute="top" constant="25" id="KNL-iy-gMm"/>
+                            <constraint firstItem="V8C-hd-oFe" firstAttribute="top" secondItem="mpz-2z-zdK" secondAttribute="bottom" constant="25" id="NvI-7S-THU"/>
+                            <constraint firstItem="V8C-hd-oFe" firstAttribute="centerX" secondItem="FZ0-Xt-tVg" secondAttribute="centerX" id="ORg-QP-hG6"/>
                             <constraint firstItem="mIp-nm-0Ty" firstAttribute="bottom" secondItem="Mlx-iB-Dlp" secondAttribute="bottom" constant="25" id="YbF-Aa-ENs"/>
                             <constraint firstItem="Mlx-iB-Dlp" firstAttribute="leading" secondItem="mIp-nm-0Ty" secondAttribute="leading" constant="50" id="eB3-q8-FDI"/>
+                            <constraint firstItem="mpz-2z-zdK" firstAttribute="centerX" secondItem="FZ0-Xt-tVg" secondAttribute="centerX" id="ppU-Us-GTm"/>
                             <constraint firstItem="mIp-nm-0Ty" firstAttribute="trailing" secondItem="Mlx-iB-Dlp" secondAttribute="trailing" constant="50" id="uOp-I6-qEo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIp-nm-0Ty"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="mpz-2z-zdK" id="p5G-eU-8xM"/>
+                        <outlet property="firstImageView" destination="mpz-2z-zdK" id="WOM-LD-2ZR"/>
+                        <outlet property="secondImageView" destination="V8C-hd-oFe" id="4ny-Mx-pXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfO-vx-N21" userLabel="First Responder" sceneMemberID="firstResponder"/>

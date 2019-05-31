@@ -13,9 +13,13 @@ import RxCocoa
 
 class ThirdExampleViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var firstImageView: UIImageView!
+    @IBOutlet weak var secondImageView: UIImageView!
     
     let disposeBag = DisposeBag()
+    
+    let firstURLSession = URLSession(configuration: .default, delegate: nil, delegateQueue: nil)
+    let secondURLSession = URLSession(configuration: .default, delegate: nil, delegateQueue: nil)
     
     override func viewDidLoad() {
         
@@ -23,20 +27,27 @@ class ThirdExampleViewController: UIViewController {
         
         navigationItem.title = "Third Example"
         
+        guard let firstUrl = URL(string: "https://cdn-www.terminix.com/cs/terminix/image/groundhog%20size.jpg") else { return }
+        guard let secondUrl = URL(string: "https://www.tacugama.com/wp-content/uploads/2017/12/Big-Lucy.jpg") else { return }
         
-        guard let url = URL(string: "https://i.pinimg.com/originals/e8/52/a3/e852a3670390e302f70bc0154ebeff20.jpg") else { return }
-        doRxSwiftMagic(with: url)
+        doRxSwiftMagic(firstURL: firstUrl, secondURL: secondUrl)
     }
     
-    private func doRxSwiftMagic(with url: URL) {
+    private func doRxSwiftMagic(firstURL: URL, secondURL: URL) {
         
-        URLSession.shared.rx.data(request: URLRequest(url: url))
-            .retry(3)
-            .map { data in
-                UIImage(data: data)
+        let firstTask = firstURLSession.rx.data(request: URLRequest(url: firstURL))
+        let secondTask = secondURLSession.rx.data(request: URLRequest(url: secondURL))
+        
+        Observable.zip(firstTask, secondTask) { first, second in
+            return (first, second)
             }
-            .subscribe(imageView.rx.image)
+            .retry()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] first, second in
+                self?.firstImageView.image = UIImage(data: first)
+                self?.secondImageView.image = UIImage(data: second)
+            })
             .disposed(by: disposeBag)
     }
-
+    
 }
