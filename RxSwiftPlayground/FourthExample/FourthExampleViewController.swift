@@ -27,7 +27,10 @@ class FourthExampleViewController: UIViewController {
         
         view.rx.observe(UIColor.self, "backgroundColor")
             .subscribe { color in
-                debugPrint("New color is \(color)")
+                guard
+                    let color = color.element,
+                    let unwrappedColor = color else { return }
+                debugPrint("New color is \(unwrappedColor)")
             }
             .disposed(by: disposeBag)
         
