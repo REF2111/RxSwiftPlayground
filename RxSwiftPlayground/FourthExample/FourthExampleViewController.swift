@@ -18,7 +18,7 @@ class FourthExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Fourth Example"
+        navigationItem.title = "Observers"
         
         doRxSwiftMagic()
     }

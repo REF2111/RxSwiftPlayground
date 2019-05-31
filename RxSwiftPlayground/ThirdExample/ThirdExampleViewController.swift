@@ -25,7 +25,7 @@ class ThirdExampleViewController: UIViewController {
         
         super.viewDidLoad()
         
-        navigationItem.title = "Third Example"
+        navigationItem.title = "Zipping Tasks"
         
         guard let firstUrl = URL(string: "https://cdn-www.terminix.com/cs/terminix/image/groundhog%20size.jpg") else { return }
         guard let secondUrl = URL(string: "https://www.tacugama.com/wp-content/uploads/2017/12/Big-Lucy.jpg") else { return }

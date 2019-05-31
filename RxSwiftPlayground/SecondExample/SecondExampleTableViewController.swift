@@ -34,7 +34,7 @@ class SecondExampleTableViewController: UIViewController {
         
         super.viewDidLoad()
         
-        navigationItem.title = "Second Example"
+        navigationItem.title = "Table View"
         tableView.register(UINib(nibName: "DogTableViewCell", bundle: nil), forCellReuseIdentifier: "dogCell")
         
         doRxSwiftMagic()

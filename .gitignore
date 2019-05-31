@@ -1,5 +1,4 @@
 Pods/
 Podfile.lock
-RxSwiftPlayground.xcworkspace/xcuserdata/
 .DS_Store
-RxSwiftPlayground.xcworkspace/xcuserdata/raphaelberendes.xcuserdatad/UserInterfaceState.xcuserstate
+RxSwiftPlayground.xcworkspace/xcuserdata/*
