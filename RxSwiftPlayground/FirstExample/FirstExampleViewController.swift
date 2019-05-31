@@ -24,6 +24,10 @@ class FirstExampleViewController: UIViewController {
         doRxSwiftMagic()
     }
     
+    deinit {
+        // Dispose bag gets emptied.
+    }
+    
     private func doRxSwiftMagic() {
         
         Observable.combineLatest(firstNameTextField.rx.text.orEmpty, lastNameTextField.rx.text.orEmpty) { $0 + " " + $1 }

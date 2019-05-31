@@ -41,10 +41,6 @@ class SecondExampleTableViewController: UIViewController {
         
     }
     
-    deinit {
-        // Dispose bag was emptied
-    }
-    
     private func doRxSwiftMagic() {
         
         let items = Observable.just(dogs)

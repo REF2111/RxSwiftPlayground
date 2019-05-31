@@ -17,8 +17,6 @@ class ThirdExampleViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    var bla: Any?
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()

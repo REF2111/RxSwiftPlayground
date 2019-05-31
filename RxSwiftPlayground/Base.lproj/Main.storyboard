@@ -129,7 +129,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlx-iB-Dlp">
                                 <rect key="frame" x="50" y="807" width="314" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Fourth Example"/>
+                                <connections>
+                                    <segue destination="hNs-NO-2a2" kind="show" id="n1b-j2-vRW"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-2z-zdK">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
@@ -156,6 +159,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfO-vx-N21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2958" y="21"/>
+        </scene>
+        <!--Fourth Example View Controller-->
+        <scene sceneID="2l7-D6-ZxL">
+            <objects>
+                <viewController id="hNs-NO-2a2" customClass="FourthExampleViewController" customModule="RxSwiftPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpm-R1-xEP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irM-JD-8LT">
+                                <rect key="frame" x="50" y="807" width="314" height="30"/>
+                                <state key="normal" title="FifthExample"/>
+                                <connections>
+                                    <segue destination="RPr-N7-gQC" kind="show" id="wFS-ly-MWh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PH6-5Z-bF5" firstAttribute="bottom" secondItem="irM-JD-8LT" secondAttribute="bottom" constant="25" id="Bou-sn-bHI"/>
+                            <constraint firstItem="PH6-5Z-bF5" firstAttribute="trailing" secondItem="irM-JD-8LT" secondAttribute="trailing" constant="50" id="nAT-7H-bCl"/>
+                            <constraint firstItem="irM-JD-8LT" firstAttribute="leading" secondItem="PH6-5Z-bF5" secondAttribute="leading" constant="50" id="wum-5W-hFp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PH6-5Z-bF5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a79-xp-PrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="21"/>
+        </scene>
+        <!--Fifth Example View Controller-->
+        <scene sceneID="sy0-eF-m5j">
+            <objects>
+                <viewController id="RPr-N7-gQC" customClass="FifthExampleViewController" customModule="RxSwiftPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZP-Vj-xaM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-y2-zVA">
+                                <rect key="frame" x="50" y="433" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-2A-Wwd">
+                                <rect key="frame" x="25" y="488" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Edu-2A-Wwd" firstAttribute="leading" secondItem="RsW-FX-Jld" secondAttribute="leading" constant="25" id="SB3-ht-FaS"/>
+                            <constraint firstItem="RsW-FX-Jld" firstAttribute="trailing" secondItem="QYV-y2-zVA" secondAttribute="trailing" constant="50" id="T7w-RY-8OW"/>
+                            <constraint firstItem="RsW-FX-Jld" firstAttribute="trailing" secondItem="Edu-2A-Wwd" secondAttribute="trailing" constant="25" id="fZ5-aX-Jj7"/>
+                            <constraint firstItem="QYV-y2-zVA" firstAttribute="centerY" secondItem="uZP-Vj-xaM" secondAttribute="centerY" id="hXx-hh-fSI"/>
+                            <constraint firstItem="QYV-y2-zVA" firstAttribute="leading" secondItem="RsW-FX-Jld" secondAttribute="leading" constant="50" id="mgh-qz-dts"/>
+                            <constraint firstItem="Edu-2A-Wwd" firstAttribute="top" secondItem="QYV-y2-zVA" secondAttribute="bottom" constant="25" id="rud-lo-eEY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RsW-FX-Jld"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="Edu-2A-Wwd" id="Rj5-Dr-XjC"/>
+                        <outlet property="searchField" destination="QYV-y2-zVA" id="jpM-Lj-5ww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ow-hJ-Pa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4330" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UDC-ro-PfA">
