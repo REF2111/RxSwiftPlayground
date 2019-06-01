@@ -42,7 +42,7 @@ class ThirdExampleViewController: UIViewController {
         Observable.zip(firstTask, secondTask) { first, second in
             return (first, second)
             }
-            .retry()
+            .retry(3)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] first, second in
                 self?.firstImageView.image = UIImage(data: first)
