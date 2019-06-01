@@ -33,17 +33,6 @@ class SecondExampleTableViewController: UIViewController {
         case boat(Boat)
     }
     
-    let sections = Observable.just([
-        SectionModel(model: "Dogs", items: [
-            CellModel.dog(.init(race: "Labrador", age: 13)),
-            CellModel.dog(.init(race: "Australian Shepherd", age: 5))
-            ]),
-        SectionModel(model: "Boats", items: [
-            CellModel.boat(.init(name: "Titanic", length: 269)),
-            CellModel.boat(.init(name: "Grace to Glory", length: 3))
-            ])
-        ])
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -55,6 +44,17 @@ class SecondExampleTableViewController: UIViewController {
     }
     
     private func fillTableView() {
+        
+        let sections = Observable.just([
+            SectionModel(model: "Dogs", items: [
+                CellModel.dog(.init(race: "Labrador", age: 13)),
+                CellModel.dog(.init(race: "Australian Shepherd", age: 5))
+                ]),
+            SectionModel(model: "Boats", items: [
+                CellModel.boat(.init(name: "Titanic", length: 269)),
+                CellModel.boat(.init(name: "Grace to Glory", length: 3))
+                ])
+            ])
         
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CellModel>>(configureCell: { dataSource, table, indexPath, item in
             switch item {
