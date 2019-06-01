@@ -31,6 +31,7 @@ class ThirdExampleViewController: UIViewController {
         guard let secondUrl = URL(string: "https://www.tacugama.com/wp-content/uploads/2017/12/Big-Lucy.jpg") else { return }
         
         doRxSwiftMagic(firstURL: firstUrl, secondURL: secondUrl)
+//        useOwnExtension(url: firstUrl)
     }
     
     private func doRxSwiftMagic(firstURL: URL, secondURL: URL) {
@@ -50,4 +51,39 @@ class ThirdExampleViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    private func useOwnExtension(url: URL) {
+        
+        URLSession.shared.rx.image(for: URLRequest(url: url))
+            .observeOn(MainScheduler.instance)
+            .subscribe { [weak self] (image) in
+                guard let image = image.element else { return }
+                self?.firstImageView.image = image
+            }
+            .disposed(by: disposeBag)
+    }
+    
+}
+
+extension Reactive where Base: URLSession {
+    
+    public func image(for request: URLRequest) -> Observable<(UIImage)> {
+        
+        return Observable.create { observer in
+            let task = self.base.dataTask(with: request) { (data, response, error) in
+                
+                guard
+                    let data = data,
+                    let image = UIImage(data: data) else {                   observer.on(.error(error ?? RxCocoaURLError.unknown))
+                        return
+                }
+                
+                observer.on(.next(image))
+                observer.on(.completed)
+            }
+            
+            task.resume()
+            
+            return Disposables.create(with: task.cancel)
+        }
+    }
 }
