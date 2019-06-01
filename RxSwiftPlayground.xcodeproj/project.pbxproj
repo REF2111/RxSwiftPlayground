@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6007921E22A26DE300405FB3 /* FifthExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007921D22A26DE300405FB3 /* FifthExampleViewController.swift */; };
+		6007922122A2823900405FB3 /* BoatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6007921F22A2823900405FB3 /* BoatTableViewCell.swift */; };
+		6007922222A2823900405FB3 /* BoatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6007922022A2823900405FB3 /* BoatTableViewCell.xib */; };
 		601CCEA722A013A400FB58C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEA622A013A400FB58C7 /* AppDelegate.swift */; };
 		601CCEA922A013A400FB58C7 /* FirstExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CCEA822A013A400FB58C7 /* FirstExampleViewController.swift */; };
 		601CCEAC22A013A400FB58C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601CCEAA22A013A400FB58C7 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		0A2D42CF8046843E7AEA33AB /* Pods-RxSwiftPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPlayground.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPlayground/Pods-RxSwiftPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		1A25EA7DC4EE02253FAC6661 /* Pods_RxSwiftPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6007921D22A26DE300405FB3 /* FifthExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthExampleViewController.swift; sourceTree = "<group>"; };
+		6007921F22A2823900405FB3 /* BoatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatTableViewCell.swift; sourceTree = "<group>"; };
+		6007922022A2823900405FB3 /* BoatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoatTableViewCell.xib; sourceTree = "<group>"; };
 		601CCEA322A013A300FB58C7 /* RxSwiftPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		601CCEA622A013A400FB58C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		601CCEA822A013A400FB58C7 /* FirstExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExampleViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				6097AC5F22A02B8600DA03EB /* SecondExampleTableViewController.swift */,
+				6007921F22A2823900405FB3 /* BoatTableViewCell.swift */,
+				6007922022A2823900405FB3 /* BoatTableViewCell.xib */,
 				6097AC6322A02D0000DA03EB /* DogTableViewCell.swift */,
 				6097AC6422A02D0000DA03EB /* DogTableViewCell.xib */,
 			);
@@ -273,6 +279,7 @@
 			files = (
 				601CCEB122A013A800FB58C7 /* LaunchScreen.storyboard in Resources */,
 				601CCEAE22A013A800FB58C7 /* Assets.xcassets in Resources */,
+				6007922222A2823900405FB3 /* BoatTableViewCell.xib in Resources */,
 				6097AC6622A02D0000DA03EB /* DogTableViewCell.xib in Resources */,
 				601CCEAC22A013A400FB58C7 /* Main.storyboard in Resources */,
 			);
@@ -319,7 +326,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RxSwiftPlayground/Pods-RxSwiftPlayground-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -327,7 +336,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -394,6 +405,7 @@
 				6097AC6822A03F1400DA03EB /* ThirdExampleViewController.swift in Sources */,
 				601CCEA922A013A400FB58C7 /* FirstExampleViewController.swift in Sources */,
 				6007921E22A26DE300405FB3 /* FifthExampleViewController.swift in Sources */,
+				6007922122A2823900405FB3 /* BoatTableViewCell.swift in Sources */,
 				6097AC6022A02B8600DA03EB /* SecondExampleTableViewController.swift in Sources */,
 				6097AC6522A02D0000DA03EB /* DogTableViewCell.swift in Sources */,
 				601CCEA722A013A400FB58C7 /* AppDelegate.swift in Sources */,

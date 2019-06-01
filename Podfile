@@ -6,8 +6,9 @@ target 'RxSwiftPlayground' do
   use_frameworks!
   
   # Pods for RxSwiftPlayground
-  pod 'RxSwift', '5.0.0'
   pod 'RxCocoa', '5.0.0'
+  pod 'RxSwift', '5.0.0'
+  pod 'RxDataSources', '4.0.1'
 end
 
 target 'RxSwiftPlaygroundTests' do

@@ -8,63 +8,98 @@
 
 import UIKit
 
-import RxSwift
 import RxCocoa
-
-struct Dog {
-    
-    let race: String
-    let age: Int
-}
+import RxDataSources
+import RxSwift
 
 class SecondExampleTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonWidthConstraint: NSLayoutConstraint!
-    private let disposeBag = DisposeBag() // FIXME: What does he do?
+    private let disposeBag = DisposeBag()
     
-    private let dogs: [Dog] = [
-        
-        Dog(race: "Labrador", age: 13),
-        Dog(race: "Australian Shepherd", age: 5),
-        Dog(race: "Bobtail", age: 2)
-    ]
+    struct Dog {
+        let race: String
+        let age: Int
+    }
+    
+    struct Boat {
+        let name: String
+        let length: Int
+    }
+    
+    enum CellModel {
+        case dog(Dog)
+        case boat(Boat)
+    }
+    
+    let sections = Observable.just([
+        SectionModel(model: "Dogs", items: [
+            CellModel.dog(.init(race: "Labrador", age: 13)),
+            CellModel.dog(.init(race: "Australian Shepherd", age: 5))
+            ]),
+        SectionModel(model: "Boats", items: [
+            CellModel.boat(.init(name: "Titanic", length: 269)),
+            CellModel.boat(.init(name: "Grace to Glory", length: 3))
+            ])
+        ])
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        registerCells()
         navigationItem.title = "Table View"
-        tableView.register(UINib(nibName: "DogTableViewCell", bundle: nil), forCellReuseIdentifier: "dogCell")
         
-        doRxSwiftMagic()
-        
+        fillTableView()
     }
     
-    private func doRxSwiftMagic() {
+    private func fillTableView() {
         
-        let items = Observable.just(dogs)
-        
-        items
-            .bind(to: tableView.rx.items(cellIdentifier: "dogCell", cellType: DogTableViewCell.self)) { (row, dog, cell) in
-                cell.raceLabel.text = dog.race
-                cell.ageLabel.text = "\(dog.age)"
+        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CellModel>>(configureCell: { dataSource, table, indexPath, item in
+            switch item {
+            case .dog(let item):
+                return self.dogCell(for: item)
+            case .boat(let item):
+                return self.boatCell(for: item)
             }
-            .disposed(by: disposeBag)
+        })
         
-        tableView.rx
-            .modelSelected(Dog.self)
-            .subscribe(onNext: { [weak self] dog in
-                let alertController = UIAlertController(title: dog.race, message: "\(dog.age)", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                self?.present(alertController, animated: true)
-            })
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].model
+        }
+
+        sections
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+    }
+    
+    //
+    //
+    //
+    //
+    //
+    
+    private func registerCells() {
         
-        tableView.rx.contentOffset
-            .map { $0.y + 100 }
-            .bind(to: buttonWidthConstraint.rx.constant)
-            .disposed(by: disposeBag)
+        tableView.register(UINib(nibName: "DogTableViewCell", bundle: nil), forCellReuseIdentifier: "dogCell")
+        tableView.register(UINib(nibName: "BoatTableViewCell", bundle: nil), forCellReuseIdentifier: "boatCell")
+    }
+    
+    private func dogCell(for element: Dog) -> DogTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dogCell") as! DogTableViewCell
+        cell.raceLabel.text = element.race
+        cell.ageLabel.text = "\(element.age)"
+        
+        return cell
+    }
+    
+    private func boatCell(for element: Boat) -> BoatTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "boatCell") as! BoatTableViewCell
+        cell.nameLabel.text = element.name
+        cell.lengthLabel.text = "\(element.length)"
+        
+        return cell
     }
     
 }
