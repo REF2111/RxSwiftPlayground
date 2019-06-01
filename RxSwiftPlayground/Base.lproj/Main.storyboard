@@ -232,8 +232,8 @@
                         <viewLayoutGuide key="safeArea" id="RsW-FX-Jld"/>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="Edu-2A-Wwd" id="Rj5-Dr-XjC"/>
-                        <outlet property="searchField" destination="QYV-y2-zVA" id="jpM-Lj-5ww"/>
+                        <outlet property="resultLabel" destination="Edu-2A-Wwd" id="GkO-mC-Seg"/>
+                        <outlet property="searchField" destination="QYV-y2-zVA" id="b0e-kt-6a1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ow-hJ-Pa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
