@@ -16,6 +16,7 @@ class FirstExampleViewController: UIViewController {
     @IBOutlet private weak var firstNameTextField: UITextField!
     @IBOutlet private weak var lastNameTextField: UITextField!
     @IBOutlet private weak var greetingsLabel: UITextField!
+    
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {

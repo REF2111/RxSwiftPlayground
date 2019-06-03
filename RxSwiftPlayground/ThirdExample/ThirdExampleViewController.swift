@@ -73,7 +73,8 @@ extension Reactive where Base: URLSession {
                 
                 guard
                     let data = data,
-                    let image = UIImage(data: data) else {                   observer.on(.error(error ?? RxCocoaURLError.unknown))
+                    let image = UIImage(data: data) else {
+                        observer.on(.error(error ?? RxCocoaURLError.unknown))
                         return
                 }
                 
@@ -82,7 +83,8 @@ extension Reactive where Base: URLSession {
             }
             
             task.resume()
-            
+
+            // Cancel on disposal, if task wasn't finished yet.
             return Disposables.create(with: task.cancel)
         }
     }

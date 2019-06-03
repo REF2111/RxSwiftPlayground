@@ -44,7 +44,6 @@ class FifthExampleViewController: UIViewController {
                 self?.resetResultLabel()
             })
             .disposed(by: disposeBag)
-        
     }
     
     private func fetchResults(from query: String) -> Observable<String> {
